@@ -8,6 +8,7 @@
 
 import UIKit
 import Combine
+import CombineCocoa
 
 class NumbersViewController: UIViewController {
     @IBOutlet weak var number1: UITextField!
@@ -16,9 +17,27 @@ class NumbersViewController: UIViewController {
 
     @IBOutlet weak var result: UILabel!
 
+    var subscription = Set<AnyCancellable>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        Publishers
+            .CombineLatest3(number1.textPublisher,
+                            number2.textPublisher,
+                            number3.textPublisher)
+            .map { textValue1, textValue2, textValue3 -> Int in
+                return textValue1.getNumber() + textValue2.getNumber() + textValue3.getNumber()
+            }
+            .map { "\($0)" }
+            .assign(to: \.text, on: result)
+//            .sink{ value in
+//                print(#line, "- value: \(value)")
+//            }
+            .store(in: &subscription)
+        
+        
+// Rx 바인딩
 //        Observable.combineLatest(
 //            number1.rx.text.orEmpty,
 //            number2.rx.text.orEmpty,
@@ -29,5 +48,12 @@ class NumbersViewController: UIViewController {
 //            .map { $0.description }
 //            .bind(to: result.rx.text)
 //            .disposed(by: disposeBag)
+    }
+    
+}
+
+extension String? {
+    fileprivate func getNumber() -> Int {
+        return Int(self ?? "0") ?? 0
     }
 }
