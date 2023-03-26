@@ -25,8 +25,7 @@ class ViewController: UIViewController {
                 print(#fileID, #function, #line, "-")
                 
                 #warning("TODO : -numbers로 화면이동")
-                let numbersStoryboad = UIStoryboard(name: "Numbers", bundle: Bundle.main)
-                let numbersVC = numbersStoryboad.instantiateViewController(withIdentifier: "NumbersViewController")
+                let numbersVC = NumbersViewController.instantiate("Numbers")
                 self.navigationController?.pushViewController(numbersVC, animated: true)
             }
             .store(in: &subscriptions)
