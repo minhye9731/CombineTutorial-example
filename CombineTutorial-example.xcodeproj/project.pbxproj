@@ -18,6 +18,7 @@
 		0E1AFE4E29D07C6900E18459 /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1AFE4D29D07C6900E18459 /* NumbersViewController.swift */; };
 		0E1AFE5029D091F100E18459 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1AFE4F29D091F100E18459 /* UIViewController+Ext.swift */; };
 		0E1AFE5229D0968000E18459 /* NumbersSwiftUIContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1AFE5129D0968000E18459 /* NumbersSwiftUIContainerVC.swift */; };
+		0E1AFE5529D335D600E18459 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1AFE5429D335D600E18459 /* PinLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E1AFE5529D335D600E18459 /* PinLayout in Frameworks */,
 				0E1AFE4A29D0789B00E18459 /* CombineCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +101,7 @@
 			name = "CombineTutorial-example";
 			packageProductDependencies = (
 				0E1AFE4929D0789B00E18459 /* CombineCocoa */,
+				0E1AFE5429D335D600E18459 /* PinLayout */,
 			);
 			productName = "CombineTutorial-example";
 			productReference = 0E1AFE3129D0783200E18459 /* CombineTutorial-example.app */;
@@ -130,6 +133,7 @@
 			mainGroup = 0E1AFE2829D0783200E18459;
 			packageReferences = (
 				0E1AFE4829D0789B00E18459 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				0E1AFE5329D335D600E18459 /* XCRemoteSwiftPackageReference "PinLayout" */,
 			);
 			productRefGroup = 0E1AFE3229D0783200E18459 /* Products */;
 			projectDirPath = "";
@@ -392,6 +396,14 @@
 				kind = branch;
 			};
 		};
+		0E1AFE5329D335D600E18459 /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -399,6 +411,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E1AFE4829D0789B00E18459 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
 			productName = CombineCocoa;
+		};
+		0E1AFE5429D335D600E18459 /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E1AFE5329D335D600E18459 /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
