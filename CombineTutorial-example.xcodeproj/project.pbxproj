@@ -19,6 +19,7 @@
 		0E1AFE5029D091F100E18459 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1AFE4F29D091F100E18459 /* UIViewController+Ext.swift */; };
 		0E1AFE5229D0968000E18459 /* NumbersSwiftUIContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1AFE5129D0968000E18459 /* NumbersSwiftUIContainerVC.swift */; };
 		0E1AFE5529D335D600E18459 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1AFE5429D335D600E18459 /* PinLayout */; };
+		0E1AFE5829D5D8C700E18459 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1AFE5729D5D8C700E18459 /* FlexLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E1AFE5829D5D8C700E18459 /* FlexLayout in Frameworks */,
 				0E1AFE5529D335D600E18459 /* PinLayout in Frameworks */,
 				0E1AFE4A29D0789B00E18459 /* CombineCocoa in Frameworks */,
 			);
@@ -102,6 +104,7 @@
 			packageProductDependencies = (
 				0E1AFE4929D0789B00E18459 /* CombineCocoa */,
 				0E1AFE5429D335D600E18459 /* PinLayout */,
+				0E1AFE5729D5D8C700E18459 /* FlexLayout */,
 			);
 			productName = "CombineTutorial-example";
 			productReference = 0E1AFE3129D0783200E18459 /* CombineTutorial-example.app */;
@@ -134,6 +137,7 @@
 			packageReferences = (
 				0E1AFE4829D0789B00E18459 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 				0E1AFE5329D335D600E18459 /* XCRemoteSwiftPackageReference "PinLayout" */,
+				0E1AFE5629D5D8C700E18459 /* XCRemoteSwiftPackageReference "FlexLayout" */,
 			);
 			productRefGroup = 0E1AFE3229D0783200E18459 /* Products */;
 			projectDirPath = "";
@@ -404,6 +408,14 @@
 				kind = branch;
 			};
 		};
+		0E1AFE5629D5D8C700E18459 /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/FlexLayout.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -416,6 +428,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E1AFE5329D335D600E18459 /* XCRemoteSwiftPackageReference "PinLayout" */;
 			productName = PinLayout;
+		};
+		0E1AFE5729D5D8C700E18459 /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E1AFE5629D5D8C700E18459 /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
