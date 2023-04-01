@@ -53,7 +53,13 @@ class NumbersViewController: UIViewController {
 }
 
 extension String? {
-    fileprivate func getNumber() -> Int {
+    func getNumber() -> Int {
+        return Int(self ?? "0") ?? 0
+    }
+}
+
+extension String {
+    func getNumber() -> Int {
         return Int(self ?? "0") ?? 0
     }
 }

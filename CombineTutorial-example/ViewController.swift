@@ -39,12 +39,12 @@ class ViewController: UIViewController {
                 #warning("TODO : -numbers로 화면이동")
 //                let numbersVC = NumbersSwiftUIViewContainerVC()
 //                let numbersVC = SwiftUiContainerVC(swiftUiView: NumbersView())
-//                let numbersVC = NumbersView().getContainerVC()
+                let numbersVC = NumbersView().getContainerVC()
                 
-//                self.navigationController?.pushViewController(numbersVC, animated: true)
+                self.navigationController?.pushViewController(numbersVC, animated: true)
                 
-                let nyVC = MyView().getContainerVC()
-                self.navigationController?.pushViewController(nyVC, animated: true)
+//                let nyVC = MyView().getContainerVC()
+//                self.navigationController?.pushViewController(nyVC, animated: true)
             }
             .store(in: &subscriptions)
         
