@@ -21,6 +21,7 @@
 		0E1AFE5529D335D600E18459 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1AFE5429D335D600E18459 /* PinLayout */; };
 		0E1AFE5829D5D8C700E18459 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1AFE5729D5D8C700E18459 /* FlexLayout */; };
 		0E1AFE5B29D72CA500E18459 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1AFE5A29D72CA500E18459 /* Alamofire */; };
+		0E1AFE5D29D87D3D00E18459 /* NumbersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1AFE5C29D87D3D00E18459 /* NumbersVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0E1AFE4D29D07C6900E18459 /* NumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
 		0E1AFE4F29D091F100E18459 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		0E1AFE5129D0968000E18459 /* NumbersSwiftUIContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersSwiftUIContainerVC.swift; sourceTree = "<group>"; };
+		0E1AFE5C29D87D3D00E18459 /* NumbersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				0E1AFE4D29D07C6900E18459 /* NumbersViewController.swift */,
 				0E1AFE4F29D091F100E18459 /* UIViewController+Ext.swift */,
 				0E1AFE5129D0968000E18459 /* NumbersSwiftUIContainerVC.swift */,
+				0E1AFE5C29D87D3D00E18459 /* NumbersVM.swift */,
 			);
 			path = "CombineTutorial-example";
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				0E1AFE5029D091F100E18459 /* UIViewController+Ext.swift in Sources */,
 				0E1AFE3529D0783200E18459 /* AppDelegate.swift in Sources */,
 				0E1AFE3729D0783200E18459 /* SceneDelegate.swift in Sources */,
+				0E1AFE5D29D87D3D00E18459 /* NumbersVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
