@@ -14,7 +14,7 @@ class NumbersVM: ObservableObject {
     var subscriptions = Set<AnyCancellable>()
     
     // input - 뷰모델로 들어오는 녀석
-    
+
     @Published var number1: String = ""
     @Published var number2: String = ""
     @Published var number3: String = ""

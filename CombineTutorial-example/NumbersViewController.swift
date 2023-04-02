@@ -19,22 +19,48 @@ class NumbersViewController: UIViewController {
 
     var subscription = Set<AnyCancellable>()
     
+    var viewModel: NumbersVM = NumbersVM()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Publishers
-            .CombineLatest3(number1.textPublisher,
-                            number2.textPublisher,
-                            number3.textPublisher)
-            .map { textValue1, textValue2, textValue3 -> Int in
-                return textValue1.getNumber() + textValue2.getNumber() + textValue3.getNumber()
-            }
-            .map { "\($0)" }
-            .assign(to: \.text, on: result)
-//            .sink{ value in
-//                print(#line, "- value: \(value)")
-//            }
+        // 뷰모델에 input 넣어주기
+        number1.textPublisher
+            .compactMap{ $0 }
+            .assign(to: \.number1, on: viewModel)
             .store(in: &subscription)
+        
+        number2.textPublisher
+            .compactMap{ $0 }
+            .assign(to: \.number2, on: viewModel)
+            .store(in: &subscription)
+        
+        number3.textPublisher
+            .compactMap{ $0 }
+            .assign(to: \.number3, on: viewModel)
+            .store(in: &subscription)
+        
+        // 뷰모델에서 나오는 데이터 output (뷰와) 바인딩하기
+        viewModel.$resultValue
+            .compactMap{ $0 }
+            .assign(to: \.text, on: result)
+            .store(in: &subscription)
+        
+        
+        
+//        Publishers
+//            .CombineLatest3(number1.textPublisher,
+//                            number2.textPublisher,
+//                            number3.textPublisher)
+//            .map { textValue1, textValue2, textValue3 -> Int in
+//                return textValue1.getNumber() + textValue2.getNumber() + textValue3.getNumber()
+//            }
+//            .map { "\($0)" }
+//            .assign(to: \.text, on: result)
+////            .sink{ value in
+////                print(#line, "- value: \(value)")
+////            }
+//            .store(in: &subscription)
         
         
 // Rx 바인딩
